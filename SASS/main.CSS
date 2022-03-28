@@ -1,0 +1,88 @@
+@media screen and (max-width: 768px) 
+
+{
+
+body
+{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif ;
+    margin: 0;
+}
+
+header
+{
+    text-align: center;
+}
+
+.header_logo
+{
+    width: 100%;
+}
+
+.header_logo-img
+{
+    width: 180px;
+    margin: 10px;
+}
+
+form
+{
+    background: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+form p
+{
+    margin:0 0 0 10px;
+}
+
+.header_title
+{
+    background: white;
+}
+
+.header_title h1
+{
+    font-size: 25px;
+    padding: 10px;
+}
+
+.header_title h2
+{
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 15px 15px 15px;
+}
+
+.header_button
+{
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background: #9356DC;
+}
+
+.header_button:hover
+{
+    background: #FF79DA;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.header_nav-selector
+{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow:1px 1px 5px #f1f1f1;
+}
+
+}
