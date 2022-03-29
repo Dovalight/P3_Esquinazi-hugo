@@ -8,9 +8,6 @@ $white : #ffffff;
     border-radius: 15px;    
 }
 
-@media screen and (max-width: 768px) 
-
-{
 
 body
 {
@@ -23,6 +20,16 @@ header
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.header_flex
+{
+    display: flex;
+    justify-content: space-around;
+    a
+    {
+        padding-left: 15px;
+    }
 }
 
 .header_logo
@@ -106,7 +113,6 @@ a
         padding: 15px;
         border-radius: 15px;
         box-shadow:1px 1px 5px #f1f1f1;
-        width: 80%;
     }
         .header_nav-selector:hover 
             {
@@ -137,9 +143,10 @@ justify-content: center;
 article
 {
     position: relative;
-    margin: 15px;
+    margin: 15px 0;
     box-shadow:1px 1px 5px #f1f1f1;
     border-radius: 15px;
+    width: 100%;
     figure
     {
         overflow: hidden;
@@ -189,13 +196,14 @@ article
         h3
         {
             font-size: 20px;
-            font-weight: 900;
+            font-weight: bold;
             margin: 15px;
         }
         h4
         {
             font-size: 15px;
             margin: 15px;
+            font-weight: 500;
         }
         .article_icon
         {
@@ -211,4 +219,34 @@ article
     }
 }
 
+footer
+{
+    background: darken($white, 80%);
+    h1
+    {
+        margin: 0;
+        padding: 15px 0 0 15px;
+        color: $white;
+        font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    ul
+    {
+        list-style: none;
+        padding: 15px;
+        margin: 0;
+        li
+        {  
+            margin: 10px 0 ;  
+            a
+            {
+                color: $white;
+            }
+            .footer_ul-icon
+            {
+                padding-right: 10px;
+            }
+        }
+    }
 }
+
