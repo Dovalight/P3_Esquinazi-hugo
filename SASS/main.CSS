@@ -268,9 +268,9 @@ section .section_title {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
 }
 
 section .section_title h1 {
@@ -281,21 +281,38 @@ section .section_title h1 {
 
 section .section_title .article_icon {
   margin: 20px;
+  padding: 10px;
+}
+
+section .section_title .article_icon:active {
+  background: #9356DC;
+  color: #FF79DA;
 }
 
 .section_article {
-  position: relative;
   margin: 20px 0;
   width: 100%;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .section_article .section_figure {
   overflow: hidden;
   margin: 0;
   border-radius: 0;
+  width: 100%;
+  position: absolute;
 }
 
 .section_article .section_figure img {
@@ -306,11 +323,29 @@ section .section_title .article_icon {
   height: 300px;
 }
 
-.section_article .section_carte {
-  margin: 20px;
+.section_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  margin-top: 255px;
+  z-index: 1;
+  background: #ffffff;
 }
 
-.section_article .section_carte h2 {
+.section_menu .section_carte {
+  width: 80%;
+}
+
+.section_menu .section_carte h2 {
   font-size: 20px;
   font-weight: 500;
   padding-bottom: 3px;
@@ -318,7 +353,7 @@ section .section_title .article_icon {
   width: 50px;
 }
 
-.section_article .section_carte .section_carte-flex {
+.section_menu .section_carte .section_carte-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,18 +367,29 @@ section .section_title .article_icon {
   -webkit-box-shadow: 1px 1px 5px #f1f1f1;
           box-shadow: 1px 1px 5px #f1f1f1;
   border-radius: 15px;
+  margin: 15px 0;
 }
 
-.section_article .section_carte .section_carte-price {
-  padding-top: 40px;
+.section_menu .section_carte .section_carte-flex div {
+  width: 65%;
+  margin-left: 10px;
 }
 
-.section_article .section_carte .fa-check {
+.section_menu .section_carte .section_carte-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.section_menu .section_carte .fa-check {
   padding-top: 40px;
   margin: 0 15px 0 0;
 }
 
-.section_article .section_button {
+.section_menu .section_button {
   margin: 15px;
   padding: 15px 20px;
   border-radius: 25px;
@@ -351,11 +397,11 @@ section .section_title .article_icon {
   background: #9356DC;
 }
 
-.section_article .section_button a {
+.section_menu .section_button a {
   color: #ffffff;
 }
 
-.section_article .section_button:hover {
+.section_menu .section_button:hover {
   background: #FF79DA;
 }
 
