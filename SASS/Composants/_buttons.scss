@@ -1,0 +1,43 @@
+.header_title-button
+    {
+        padding: 15px 20px;
+        @include radius(25px);
+        border: none;
+        margin:0 0 15px 0;
+        background: rgb(147,86,220);
+        background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+        @media screen and(min-width: 1080px)
+        {
+            position: absolute;  
+            top: 40px;
+            left: 550px;
+        }
+        a
+        {
+            color: $white;
+        }
+    }
+.header_title-button:hover
+{
+    background: rgb(147,86,220);
+    background: linear-gradient(142deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+}
+
+.section_button
+    {
+    margin: 25px;
+    padding: 15px 20px;
+    @include radius(25px);
+    border: none;
+    background: rgb(147,86,220);
+    background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+        a
+        {
+            color: $white;
+        }
+    }
+.section_button:hover
+{
+    background: rgb(147,86,220);
+    background: linear-gradient(142deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+}

@@ -1,0 +1,181 @@
+section
+{
+display: flex;
+flex-direction: column;
+    .section_title
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        h1
+        {
+            margin: 20px;
+            font-size: 25px;
+            font-family: 'shrikhand', Arial, Helvetica, sans-serif;
+        }
+        a
+        {
+            margin: 20px;
+            padding: 10px;
+            font-size: 25px;
+            .article_heart-full
+            {
+                display: none;
+            }
+        }
+        a:active
+        {
+            background: rgb(147,86,220);
+            background: linear-gradient(180deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+        .article_heart-line
+        {
+            display: none;
+        }
+        .article_heart-full
+        {
+            display: inline;
+        }
+        }
+    }
+}
+
+.section_article
+{
+    margin: 20px 0;
+    width: 100%;
+    @include radius(0);
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $white;
+    .section_figure
+    {
+        overflow: hidden;
+        margin: 0;
+        @include radius(0);
+        width: 100%;
+        position: absolute;
+        img
+        {
+            display: inline-block;
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+        }
+    }
+    .section_button
+    {
+    margin: 25px;
+    padding: 15px 20px;
+    @include radius(25px);
+    border: none;
+    background: rgb(147,86,220);
+    background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+        a
+        {
+            color: $white;
+        }
+    }
+    .section_button:hover
+    {
+        background: rgb(147,86,220);
+        background: linear-gradient(142deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+    }
+}
+
+.section_menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    margin-top: 255px;
+    z-index: 1;
+    background: $white;
+    @media screen and(min-width: 768px)
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .section_carte
+    {
+        width: 80%;
+        @media screen and(min-width: 768px)
+        {
+            width: 40%;
+            height: 430px;
+        }
+        @media screen and(min-width: 1080px)
+        {
+            width: 30%;
+        }
+        h2
+        {
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 3px;
+            border-bottom: 2px $third_color  solid;
+            width: 50px;
+        }
+        .section_carte-flex
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            box-shadow:1px 1px 5px #f1f1f1;
+            @include radius;
+            margin:15px 0;
+            div
+            {
+                width: 65%;
+                margin-left: 10px;
+                font-size: 15px;
+                h3, p
+                {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden; 
+                    margin: 15px 0;
+                }
+            }
+        }
+        .section_carte-price
+        {
+           display: flex;
+           align-items: flex-end;
+        }
+       
+    }
+     .section_carte-anim
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        color: $third_color;
+        font-size: 20px;
+        background: $third_color;
+        border-radius: 0 15px 15px 0;
+        transition: transform 300ms;
+        &:hover
+        {
+            transform: translate(-100%, 0);
+        }
+        .fa-check
+        {
+            background: $white;
+            padding: 5px;
+            @include radius;  
+            transition: transform 500ms;
+            &:hover
+            {
+                transform: rotate(360deg);
+            }          
+        }
+
+    }
+}

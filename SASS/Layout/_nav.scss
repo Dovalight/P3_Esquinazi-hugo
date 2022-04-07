@@ -1,0 +1,114 @@
+nav
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+    @media screen and(min-width: 768px)
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        
+    }
+    h1
+    {
+        font-size: 25px;
+        margin: 15px;
+        @media screen and(min-width: 768px)
+        {
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 15px;
+            
+        }
+    }
+}
+
+article
+{
+    position: relative;
+    margin: 15px 0;
+    box-shadow:1px 1px 5px darken($white, 35%);
+    @include radius;
+    @media screen and(min-width: 768px)
+    {
+        width: 45%;
+        margin-top: 50px;
+    }
+    figure
+    {
+        overflow: hidden;
+        margin: 0;
+        @include radius;
+        img
+        {
+            display: inline-block;
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+        }
+    }
+    .article_txt
+    {
+        p
+        {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 0;
+            background: $third_color;
+            font-weight: bold ;
+            color: darken( $third_color, 35%);
+            margin: 25px;
+            padding: 5px 15px;
+            @include radius(2px);
+        }
+        .article_name
+        {
+            position: absolute;
+            bottom: 0; 
+            width: 100%;
+            background: $white;
+            box-shadow:1px 1px 5px #f1f1f1;
+            border-radius: 0 0 15px 15px;
+        }
+        h3
+        {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px;
+        }
+        h4
+        {
+            font-size: 15px;
+            margin: 15px;
+            font-weight: 500;
+        }
+    }
+    .article_like
+    {
+        position: absolute;
+        z-index: 1;
+        bottom: 25px;
+        right: 25px;
+        font-size: 25px;
+        .article_heart-full
+        {
+            display: none;
+        }
+    }
+    .article_like:active
+    {
+        background: linear-gradient(180deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+        .article_heart-line
+        {
+            display: none;
+        }
+        .article_heart-full
+        {
+            display: inline;
+        }
+    }
+}
