@@ -1,0 +1,9 @@
+@mixin radius ($largeur: 15px)
+{
+    border-radius: $largeur;    
+}
+
+@mixin margin ($average :15px) 
+{
+    margin: $average;    
+}
