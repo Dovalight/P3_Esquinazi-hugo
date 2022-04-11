@@ -1,0 +1,73 @@
+.section_carte-flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow:1px 1px 5px #f1f1f1;
+    margin:15px 0;
+    transition: all 300ms;
+    @include radius;
+    div
+    {
+        width: 65%;
+        margin-left: 10px;
+        font-size: 15px;
+        h3, p
+        {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden; 
+            margin: 15px 0;
+        }
+    }
+    &:hover
+    {
+        padding-right: 70px;
+        .section_carte-anim
+        {
+            right: 0;
+        }
+        .fa-check
+        {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.section_carte-anim
+{
+    position: absolute;
+    right: -70px;
+    height: 100%;
+    width: 70px;
+    color: $third_color;
+    background: $third_color;
+    font-size: 20px;
+    border-radius: 0 15px 15px 0;
+    transition: all 300ms;
+    .fa-check
+    {
+        position: absolute;
+        left: 20px;
+        bottom: 27px;
+        background: $white;
+        padding: 5px;
+        @include radius;  
+        transition: all 300ms;      
+    }
+}
+
+
+@keyframes trucpourlemoment
+{
+    0%
+    {
+        transform: scaleX(0);
+    }
+    100%
+    {
+        transform: scaleX(1);    
+    }
+}
