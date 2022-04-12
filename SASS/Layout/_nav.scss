@@ -31,6 +31,8 @@ article
     position: relative;
     margin: 15px 0;
     box-shadow:1px 1px 5px darken($white, 35%);
+    width: 95%;
+    margin-left: 10px;
     @include radius;
     @media screen and(min-width: 768px)
     {
@@ -99,16 +101,18 @@ article
             display: none;
         }
     }
-    .article_like:active
+    .article_like:hover
     {
-        background: linear-gradient(180deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
         .article_heart-line
         {
             display: none;
         }
         .article_heart-full
         {
-            display: inline;
+            display: inline;         
+            background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 36%, rgba(147,86,220,1) 85%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
