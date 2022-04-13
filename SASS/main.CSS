@@ -150,6 +150,7 @@ form p {
 
 .header_nav h1 {
   margin-left: 10px;
+  padding-right: 15px;
   font-size: 25px;
 }
 
@@ -534,17 +535,88 @@ article .article_like:hover .article_heart-full {
   }
 }
 
-@-webkit-keyframes loader {
+.loader {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
+  background: #ffffff;
+  text-align: center;
+}
+
+.loader .plate {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #99E2D0;
+  border: 3px solid #c1ede2;
+  -webkit-box-shadow: 1px 1px 5px #a6a6a6;
+          box-shadow: 1px 1px 5px #a6a6a6;
+  -webkit-animation: lds-circle 2.2s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
+          animation: lds-circle 2.2s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
+}
+
+.loader .plate div {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 24px;
+  border-radius: 50%;
+  background: #4acbab;
+  -webkit-box-shadow: 2px 2px 4px inset #32b091;
+          box-shadow: 2px 2px 4px inset #32b091;
+}
+
+@-webkit-keyframes lds-circle {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
   0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(1800deg);
+            transform: rotateY(1800deg);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+            animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  99% {
+    -webkit-transform: rotateY(3600deg);
+            transform: rotateY(3600deg);
   }
   100% {
+    -webkit-transform: translateX(-99999px);
+            transform: translateX(-99999px);
   }
 }
 
-@keyframes loader {
+@keyframes lds-circle {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
   0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(1800deg);
+            transform: rotateY(1800deg);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+            animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  99% {
+    -webkit-transform: rotateY(3600deg);
+            transform: rotateY(3600deg);
   }
   100% {
+    -webkit-transform: translateX(-99999px);
+            transform: translateX(-99999px);
   }
 }
 
