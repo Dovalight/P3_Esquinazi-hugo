@@ -110,7 +110,7 @@ form
     }
     .header_nav-selector
     {
-        margin: 10px;
+        margin: 10px 15px;
         background: darken($white, 3%);
         @include radius;
         box-shadow:1px 1px 5px darken($white,8%);

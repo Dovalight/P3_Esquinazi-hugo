@@ -15,12 +15,16 @@
         width: 65%;
         margin-left: 10px;
         font-size: 15px;
-        h3, p
+        h3, h4
         {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden; 
             margin: 15px 0;
+        }
+        h4
+        {
+            font-weight: 500;
         }
     }
     &:hover
@@ -82,26 +86,30 @@
     }
 }
 
-
 .loader 
 {
-    position: absolute;
     display: inline-block;
+    position: absolute;
     width: 100%;
+    height: 100vh;
     transform: translateZ(1px);
     background: $white;
     text-align: center;
+    animation: loader 3s both;
     .plate
     {
+        position: absolute;
+        top: 50%;
+        margin-top: -64px ;
+        margin-left: -64px;
         display: inline-block;
         width: 128px;
         height: 128px;
-        margin: 8px;
         border-radius: 50%;
         background: $third_color;
         border: 3px solid lighten($third_color, 10%);
         box-shadow: 1px 1px 5px darken($white,  35%);
-        animation: lds-circle 2.2s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
+        animation: lds-circle 1.5s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
         div
         {
             display: inline-block;
@@ -127,16 +135,54 @@
     }
     50% 
     {
-        transform: rotateY(1800deg);
+        transform: rotateY(900deg);
         animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
     }
     99% 
     {
-        transform: rotateY(3600deg);
+        transform: rotateY(1800deg);
     }
     100%
     {
-        transform: translateX(-99999px) ;
+        transform: translateX(-9999px);
+    }
+}
+
+@keyframes page 
+{
+    0%
+    {   
+        opacity: 0;
+        height: 0;
+    } 
+    99%
+    {   
+        opacity: 0;
+        height: 0;
+    }    
+    100%
+    {
+        opacity: 1;
+        height: 100%;
     }
 }
   
+
+@keyframes loader
+{
+    0%
+    {   
+        opacity: 1;
+        height: 100vh;
+    }   
+    99%
+    {   
+        opacity: 1;
+        height: 100vh;
+    }  
+    100%
+    {
+        opacity: 0;
+        height: 0;
+    }
+}

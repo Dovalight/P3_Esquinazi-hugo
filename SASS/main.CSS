@@ -16,6 +16,11 @@ a {
   color: black;
 }
 
+.page {
+  -webkit-animation: page 3s both;
+          animation: page 3s both;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,7 +160,7 @@ form p {
 }
 
 .header_nav .header_nav-selector {
-  margin: 10px;
+  margin: 10px 15px;
   background: #f7f7f7;
   border-radius: 15px;
   -webkit-box-shadow: 1px 1px 5px #ebebeb;
@@ -359,11 +364,11 @@ article .article_like .article_heart-full {
   display: none;
 }
 
-article .article_like:hover .article_heart-line {
+article .article_like:active .article_heart-line {
   display: none;
 }
 
-article .article_like:hover .article_heart-full {
+article .article_like:active .article_heart-full {
   display: inline;
   background: -webkit-linear-gradient(90deg, #ff79da 36%, #9356dc 85%);
   -webkit-background-clip: text;
@@ -375,6 +380,7 @@ article .article_like:hover .article_heart-full {
   border-radius: 25px;
   border: none;
   margin: 0 0 15px 0;
+  color: #ffffff;
   background: #9356dc;
   background: linear-gradient(354deg, #9356dc 37%, #ff79da 100%);
 }
@@ -387,13 +393,11 @@ article .article_like:hover .article_heart-full {
   }
 }
 
-.header_title-button a {
-  color: #ffffff;
-}
-
 .header_title-button:hover {
   background: #9356dc;
   background: linear-gradient(142deg, #9356dc 37%, #ff79da 100%);
+  -webkit-box-shadow: 2px 2px 3px #b3b3b3;
+          box-shadow: 2px 2px 3px #b3b3b3;
 }
 
 .section_button {
@@ -401,17 +405,16 @@ article .article_like:hover .article_heart-full {
   padding: 15px 20px;
   border-radius: 25px;
   border: none;
+  color: #ffffff;
   background: #9356dc;
   background: linear-gradient(354deg, #9356dc 37%, #ff79da 100%);
-}
-
-.section_button a {
-  color: #ffffff;
 }
 
 .section_button:hover {
   background: #9356dc;
   background: linear-gradient(142deg, #9356dc 37%, #ff79da 100%);
+  -webkit-box-shadow: 2px 2px 3px #b3b3b3;
+          box-shadow: 2px 2px 3px #b3b3b3;
 }
 
 .section_carte-flex {
@@ -443,11 +446,15 @@ article .article_like:hover .article_heart-full {
   font-size: 15px;
 }
 
-.section_carte-flex div h3, .section_carte-flex div p {
+.section_carte-flex div h3, .section_carte-flex div h4 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   margin: 15px 0;
+}
+
+.section_carte-flex div h4 {
+  font-weight: 500;
 }
 
 .section_carte-flex:hover {
@@ -536,27 +543,33 @@ article .article_like:hover .article_heart-full {
 }
 
 .loader {
-  position: absolute;
   display: inline-block;
+  position: absolute;
   width: 100%;
+  height: 100vh;
   -webkit-transform: translateZ(1px);
           transform: translateZ(1px);
   background: #ffffff;
   text-align: center;
+  -webkit-animation: loader 3s both;
+          animation: loader 3s both;
 }
 
 .loader .plate {
+  position: absolute;
+  top: 50%;
+  margin-top: -64px;
+  margin-left: -64px;
   display: inline-block;
   width: 128px;
   height: 128px;
-  margin: 8px;
   border-radius: 50%;
   background: #99E2D0;
   border: 3px solid #c1ede2;
   -webkit-box-shadow: 1px 1px 5px #a6a6a6;
           box-shadow: 1px 1px 5px #a6a6a6;
-  -webkit-animation: lds-circle 2.2s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
-          animation: lds-circle 2.2s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
+  -webkit-animation: lds-circle 1.5s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
+          animation: lds-circle 1.5s 0.2s cubic-bezier(0, 0.2, 0.8, 1) 2 both;
 }
 
 .loader .plate div {
@@ -580,18 +593,18 @@ article .article_like:hover .article_heart-full {
             transform: rotateY(0deg);
   }
   50% {
-    -webkit-transform: rotateY(1800deg);
-            transform: rotateY(1800deg);
+    -webkit-transform: rotateY(900deg);
+            transform: rotateY(900deg);
     -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
             animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
   }
   99% {
-    -webkit-transform: rotateY(3600deg);
-            transform: rotateY(3600deg);
+    -webkit-transform: rotateY(1800deg);
+            transform: rotateY(1800deg);
   }
   100% {
-    -webkit-transform: translateX(-99999px);
-            transform: translateX(-99999px);
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
   }
 }
 
@@ -605,18 +618,78 @@ article .article_like:hover .article_heart-full {
             transform: rotateY(0deg);
   }
   50% {
-    -webkit-transform: rotateY(1800deg);
-            transform: rotateY(1800deg);
+    -webkit-transform: rotateY(900deg);
+            transform: rotateY(900deg);
     -webkit-animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
             animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
   }
   99% {
-    -webkit-transform: rotateY(3600deg);
-            transform: rotateY(3600deg);
+    -webkit-transform: rotateY(1800deg);
+            transform: rotateY(1800deg);
   }
   100% {
-    -webkit-transform: translateX(-99999px);
-            transform: translateX(-99999px);
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
+  }
+}
+
+@-webkit-keyframes page {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  99% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@keyframes page {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  99% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    height: 100vh;
+  }
+  99% {
+    opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    height: 100vh;
+  }
+  99% {
+    opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
   }
 }
 
@@ -659,11 +732,11 @@ section .section_title a .article_heart-full {
   display: none;
 }
 
-section .section_title a:hover .article_heart-line {
+section .section_title a:active .article_heart-line {
   display: none;
 }
 
-section .section_title a:hover .article_heart-full {
+section .section_title a:active .article_heart-full {
   display: inline;
   background: -webkit-linear-gradient(90deg, #ff79da 36%, #9356dc 85%);
   -webkit-background-clip: text;

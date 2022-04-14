@@ -4,6 +4,7 @@
         @include radius(25px);
         border: none;
         margin:0 0 15px 0;
+        color: $white;
         background: rgb(147,86,220);
         background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
         @media screen and(min-width: 1080px)
@@ -12,15 +13,12 @@
             top: 40px;
             left: 550px;
         }
-        a
-        {
-            color: $white;
-        }
     }
 .header_title-button:hover
 {
     background: rgb(147,86,220);
     background: linear-gradient(142deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+    box-shadow: 2px 2px 3px darken($white, 30%);
 }
 
 .section_button
@@ -29,15 +27,13 @@
     padding: 15px 20px;
     @include radius(25px);
     border: none;
+    color: $white;
     background: rgb(147,86,220);
     background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
-        a
-        {
-            color: $white;
-        }
     }
 .section_button:hover
 {
     background: rgb(147,86,220);
     background: linear-gradient(142deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
+    box-shadow: 2px 2px 3px darken($white, 30%);
 }
