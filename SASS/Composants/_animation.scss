@@ -5,7 +5,8 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    box-shadow:1px 1px 5px #f1f1f1;
+    background: $white;
+    box-shadow:2px 2px 6px darken($white, 20%);
     margin:15px 0;
     transition: all 300ms;
     animation: menu_poping 1000ms;
@@ -20,7 +21,8 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden; 
-            margin: 15px 0;
+            margin: 10px 5px;
+            font-size: 15px;
         }
         h4
         {
@@ -56,7 +58,7 @@
     {
         position: absolute;
         left: 20px;
-        bottom: 27px;
+        bottom: 19px;
         background: $white;
         padding: 5px;
         @include radius;  

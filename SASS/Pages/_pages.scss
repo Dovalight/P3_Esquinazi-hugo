@@ -33,7 +33,7 @@ flex-direction: column;
             .article_heart-full
             {
                 display: inline;
-                background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 36%, rgba(147,86,220,1) 85%);
+                background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 6%, rgba(147,86,220,1) 95%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
@@ -43,14 +43,14 @@ flex-direction: column;
 
 .section_article
 {
-    margin: 20px 0;
+    margin: 0;
     width: 100%;
     @include radius(0);
     box-shadow: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: $white;
+    background: darken($white , 5%);
     .section_figure
     {
         overflow: hidden;
@@ -77,7 +77,7 @@ flex-direction: column;
     border-radius: 20px 20px 0 0;
     margin-top: 255px;
     z-index: 1;
-    background: $white;
+    background: darken($white, 5%);
     @media screen and(min-width: 768px)
     {
         flex-direction: row;
@@ -87,6 +87,7 @@ flex-direction: column;
     .section_carte
     {
         width: 80%;
+        margin-bottom: 5px;
         @media screen and(min-width: 768px)
         {
             width: 40%;

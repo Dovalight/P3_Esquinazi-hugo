@@ -14,7 +14,8 @@ justify-content: center;
     h1
     {
         font-size: 25px;
-        margin: 15px;
+        margin: 40px 0 10px 15px;
+        font-weight: 900;
         @media screen and(min-width: 768px)
         {
             position: absolute;
@@ -80,12 +81,12 @@ article
         {
             font-size: 20px;
             font-weight: bold;
-            margin: 15px;
+            margin: 15px 0 5px 15px;
         }
         h4
         {
             font-size: 15px;
-            margin: 15px;
+            margin: 5px 0 15px 15px;
             font-weight: 500;
         }
     }
@@ -110,7 +111,7 @@ article
         .article_heart-full
         {
             display: inline;         
-            background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 36%, rgba(147,86,220,1) 85%);
+            background: -webkit-linear-gradient(90deg, rgba(255,121,218,1) 6%, rgba(147,86,220,1) 95%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }

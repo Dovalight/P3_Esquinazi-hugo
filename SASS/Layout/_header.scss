@@ -39,7 +39,7 @@ form
     box-shadow:0 2px 5px darken($white, 60%) inset;
     p
     {
-        margin:0 0 0 10px;
+        padding:10px;
     }
 }
 
@@ -69,7 +69,6 @@ form
         padding: 15px 20px;
         @include radius(25px);
         border: none;
-        margin:0 0 15px 0;
         background: rgb(147,86,220);
         background: linear-gradient(354deg, rgba(147,86,220,1) 37%, rgba(255,121,218,1) 100%);
         @media screen and(min-width: 1080px)
@@ -77,10 +76,6 @@ form
             position: absolute;  
             top: 40px;
             left: 550px;
-        }
-        a
-        {
-            color: $white;
         }
     }
     .header_title-button:hover
@@ -104,18 +99,18 @@ form
     
     h1
     {
-        margin-left: 10px;
-        padding-right: 15px;
+        margin: 20px;
         font-size: 25px;
     }
     .header_nav-selector
     {
-        margin: 10px 15px;
+        margin: 15px 25px;
         background: darken($white, 3%);
         @include radius;
-        box-shadow:1px 1px 5px darken($white,8%);
+        box-shadow:2px 4px 5px darken($white,10%);
         position: relative;
         width: 90%;
+        max-width: 350px;
         @media screen and(min-width: 1080px)
         {
             padding-right: 10px;
@@ -138,19 +133,28 @@ form
         align-items: center;
         padding-left: 40px;
         width: auto;
+        padding: 5px 35px;
+        p
+        {
+            font-weight: bold;
+        }
     }
     a:hover
     {
         background: lighten($primary_color, 35%);
-        color: $primary_color;
         @include radius;
         p
         {
             color: black;
         }
+        .header_nav-icon
+        {
+            color: $primary_color;
+        }
     }
     .header_nav-icon
     {
-        padding-right: 15px;
+        padding-right: 20px;
+        color: darken($white , 30%);
     }
 }
