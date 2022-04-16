@@ -39,7 +39,8 @@ form
     box-shadow:0 2px 5px darken($white, 60%) inset;
     p
     {
-        padding:10px;
+        padding-left: 10px;
+        margin: 0;
     }
 }
 
@@ -91,6 +92,11 @@ form
     flex-direction: column;
     padding: 5px;
     background: $white;
+    @media screen and(min-width: 768px)
+    {
+        align-items: center;
+            
+    }
     @media screen and (min-width: 1080px)
     {
         flex-direction: row;
