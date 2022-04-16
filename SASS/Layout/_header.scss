@@ -117,10 +117,6 @@ form
         position: relative;
         width: 90%;
         max-width: 350px;
-        @media screen and(min-width: 1080px)
-        {
-            padding-right: 10px;
-        }
     }
     .header_nav-number
     {
@@ -143,6 +139,7 @@ form
         p
         {
             font-weight: bold;
+            font-size: 16px;
         }
     }
     a:hover
