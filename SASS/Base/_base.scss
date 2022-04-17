@@ -5,8 +5,8 @@ body
     background: darken($white, 3%);
     @media screen and(min-width: 768px)
     {
-        max-width: 1280px;
         margin: auto;
+        max-width: 1280px;
     }
 }
 
@@ -19,4 +19,5 @@ a
 .page
 {
     animation: page 3s both;
+    width: 100%;
 }
