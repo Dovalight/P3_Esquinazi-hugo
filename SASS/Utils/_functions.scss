@@ -1,0 +1,5 @@
+@for $i from 1 through 4 {
+    .section_carte .delay#{$i} {
+        animation-delay: #{$i * 0.2}s;
+    }
+}
